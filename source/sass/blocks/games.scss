@@ -1,0 +1,144 @@
+.games {
+  padding: 25px 15px;
+}
+
+.games__wrapper {
+  padding: 40px 40px 42px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 119px 66px;
+  gap: 17px 27px;
+  max-width: 290px;
+  margin: 0 auto;
+  background-color: $banners-background;
+}
+
+.games__caption {
+  margin: 0;
+  font-family: $second-family;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 54px;
+  text-transform: uppercase;
+  color: $color-white;
+  padding-left: 1px;
+}
+
+.games__about {
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  grid-column: 1/-1;
+  max-width: 171px;
+  padding-left: 1px;
+}
+
+.games__button {
+  padding: 22px;
+  width: 206px;
+  margin: 0 auto;
+  grid-column: 1/-1;
+  outline-offset: 0;
+}
+
+.games__img-wrapper {
+  min-height: 290px;
+  display: block;
+  background-color: #000145;
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+.games__image {
+  display: block;
+  height: 290px;
+  width: 100%;
+  object-fit: cover;
+  color: $color-white;
+}
+
+@media (min-width: $tablet-width) {
+  .games {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 45px;
+    justify-content: center;
+  }
+
+  .games__wrapper {
+    width: 300px;
+    padding: 40px 40px 42px;
+    grid-template-columns: 100px 100px;
+    gap: 5px 20px;
+    max-width: unset;
+    margin: unset;
+  }
+
+  .games__img-wrapper {
+    width: 378px;
+    min-height: 348px;
+    max-width: unset;
+    margin: unset;
+  }
+
+  .games__about {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .games__button {
+    width: 216px;
+  }
+
+  .games__image {
+    height: 348px;
+  }
+
+  .games__caption {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .games {
+    padding: 100px 103px;
+  }
+
+  .games__wrapper {
+    width: 500px;
+    padding: 59px 80px 98px;
+    grid-template-columns: 168px 95px;
+    gap: 25px 77px;
+  }
+
+  .games__img-wrapper {
+    width: 660px;
+    min-height: 500px;
+  }
+
+  .games__image {
+    height: 500px;
+  }
+
+  .games__caption {
+    font-size: 82px;
+    line-height: 96px;
+    padding-top: 2px;
+  }
+
+  .games__about {
+    margin-top: -4px;
+  }
+
+  .games__button {
+    width: 340px;
+    padding: 12px 10px 10px;
+    grid-column: 1 / -1;
+    outline-offset: -2px;
+    min-height: 59px;
+  }
+}

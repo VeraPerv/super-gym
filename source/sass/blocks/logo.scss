@@ -1,0 +1,36 @@
+.logo {
+  display: block;
+  width: 100px;
+  min-height: 20px;
+}
+
+.logo__img {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  color: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    width: 110px;
+    min-height: 22px;
+  }
+
+  .logo__img {
+    width: 110px;
+    min-height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 130px;
+    min-height: 26px;
+  }
+
+  .logo__img {
+    width: 130px;
+    min-height: 26px;
+  }
+}

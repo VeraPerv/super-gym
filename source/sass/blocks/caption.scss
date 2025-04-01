@@ -1,0 +1,27 @@
+.caption {
+  font-family: $second-family;
+  text-align: left;
+  margin: 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+
+  &--light {
+    color: $color-white;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .caption {
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .caption {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}

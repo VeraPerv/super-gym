@@ -1,0 +1,30 @@
+.features {
+  background-color: $primary-bg;
+  padding: 41px 0 40px;
+}
+
+.features__caption {
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 61px 0 60px;
+  }
+
+  .features__caption {
+    margin-bottom: 49px;
+    padding: 0 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding: 100px 103px 20px;
+  }
+
+  .features__caption {
+    margin-bottom: 50px;
+  }
+}

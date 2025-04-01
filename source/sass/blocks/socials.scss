@@ -1,0 +1,102 @@
+.socials {
+  margin: 0;
+  padding: 0 10px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: $color-white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $divider;
+    transition: background-color 0.3s ease;
+
+    &::before {
+      background-color: $color-white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $additional-accent;
+    outline: none;
+    transition: background-color 0.3s ease;
+
+    &::before {
+      background-color: $color-white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &:active {
+    background-color: $color-primary;
+    transition: background-color 0.3s ease;
+
+    &::before {
+      background-color: $color-white;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: $dark;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    width: 14px;
+    height: 15px;
+  }
+
+  &--vk::before {
+    mask-image: url("/__spritemap#sprite-vk-view");
+    mask-size: 13px 8px;
+  }
+
+  &--ok::before {
+    mask-image: url("/__spritemap#sprite-ok-view");
+    mask-size: 10px 16px;
+  }
+
+  &--reddit::before {
+    mask-image: url("/__spritemap#sprite-reddit-view");
+    mask-size: 15px 15px;
+  }
+}
+
+.socials__link-disabled {
+  background-color: $disabled-light-grey;
+  pointer-events: none;
+
+  &::before {
+    background-color: $dark;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .socials {
+    gap: 15px;
+    max-width: 105px;
+    padding: unset;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .socials {
+    gap: 10px;
+    max-width: 95px;
+    margin-left: -2px;
+  }
+}

@@ -1,0 +1,101 @@
+.time {
+  display: block;
+}
+
+.time__date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  gap: 4px;
+  justify-content: center;
+}
+
+.time__month {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-white;
+  max-width: 32px;
+}
+
+.time__day {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-white;
+}
+
+.time__time {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-white;
+  text-align: right;
+  padding-right: 2px;
+}
+
+.time__caption {
+  margin-bottom: 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .time__date {
+    gap: 6px;
+    margin-bottom: 9px;
+    justify-content: left;
+  }
+
+  .time__day {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 9px;
+  }
+
+  .time__month {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 67px;
+  }
+
+  .time__time {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .time__caption:first-child {
+    margin-bottom: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .time__day {
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 5px;
+  }
+
+  .time__time {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .time__month {
+    padding-top: 1px;
+    line-height: 24px;
+  }
+
+  .time__date {
+    margin-bottom: 17px;
+  }
+
+  .time__caption {
+    margin-bottom: 6px;
+
+    &:first-child {
+      margin-bottom: 3px;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  width: 93px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: calc(100% - 20px);
+    background-color: $color-white;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+  }
+
+  &:hover::before {
+    opacity: 0.8;
+  }
+
+  &--light {
+    color: $color-white;
+
+    &:hover {
+      opacity: 0.8;
+      outline: none;
+    }
+  }
+
+  &--dark {
+    color: $feature-accent-bg;
+
+    &:hover {
+      color: $feature-accent-bg;
+      opacity: 0.8;
+    }
+
+    &:hover::before {
+      background-color: rgba(28, 51, 116, 0.8);
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $feature-accent-bg;
+      outline: 1px solid  $feature-accent-bg;
+    }
+
+    &:focus::before,
+    &:focus-visible::before {
+      display: none;
+    }
+  }
+
+  &--dark::before {
+    background-color: $divider;
+  }
+
+  &--dark:active {
+    color: $feature-accent-bg;
+    opacity: 1;
+    outline: none;
+  }
+
+  &--dark:active::before {
+    display: block;
+    background-color: $feature-accent-bg;
+  }
+}
+
+.link--light:focus,
+.link--light:focus-visible {
+  outline: 1px solid $color-white;
+  color: $color-white;
+  opacity: 1;
+
+  &::before {
+    display: none;
+  }
+
+  &:active {
+    color: $color-white;
+    opacity: 1;
+    outline: none;
+
+    &::before {
+      display: block;
+    }
+  }
+}
+
+/* Стиль disabled для кнопки Подробнее со светлым цветом шрифта */
+.link--light-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+
+  &::before {
+    opacity: 0.5;
+  }
+}
+
+.link--dark-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+
+  &::before {
+    background-color: rgba(28, 51, 116, 0.3);
+  }
+}

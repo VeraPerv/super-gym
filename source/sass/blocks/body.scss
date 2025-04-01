@@ -1,0 +1,17 @@
+.body {
+  font-family: $font-primary;
+  color: $color-primary;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.body__main {
+  flex-grow: 1;
+}

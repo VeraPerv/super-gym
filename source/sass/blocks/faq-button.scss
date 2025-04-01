@@ -1,0 +1,63 @@
+.faq-button {
+  display: block;
+  border: none;
+  outline: 1px solid $tab-border;
+  outline-offset: -1px;
+  background-color: transparent;
+  padding: 15px;
+  width: 140px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: $color-primary;
+  cursor: pointer;
+
+  &--active {
+    background: linear-gradient(151deg, #ed0233 13%, #003eb7 100%);
+    outline: none;
+    color: $color-white;
+  }
+
+  &:hover {
+    outline: 1px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 1px solid $color-primary;
+    color: $color-primary;
+    background-color: $color-white;
+  }
+
+  &:active {
+    background: linear-gradient(151deg, #ed0233 13%, #003eb7 100%);
+    color: $color-white;
+    outline: none;
+  }
+
+  &:disabled {
+    outline-color: $tab-border;
+    color: $tab-disabled;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .faq-button {
+    width: 162px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .faq-button {
+    width: 260px;
+    padding: 20px 18px 16px;
+  }
+}

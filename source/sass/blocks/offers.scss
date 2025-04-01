@@ -1,0 +1,146 @@
+.offers {
+  padding-top: 41px;
+}
+
+.offers__caption {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 39px;
+}
+
+.offers__period-wrapper {
+  background-color: $banners-background;
+  padding: 31px 15px 25px;
+
+  div {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    color: $color-white;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    display: block;
+    margin-top: 8px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 19px;
+  }
+}
+
+.offers__link {
+  margin: 0 auto;
+}
+
+.offers__image-wrapper {
+  position: relative;
+}
+
+.offers__image {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .offers {
+    padding: 61px 45px 59px;
+    display: grid;
+    grid-template-columns: 278px 400px;
+    row-gap: 34px;
+    justify-content: center;
+  }
+
+  .offers__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .offers__period-wrapper {
+    padding: 40px 26px 35px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    div {
+      text-align: left;
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: unset;
+    }
+
+    span {
+      font-size: 70px;
+      line-height: 70px;
+      margin-top: 20px;
+    }
+
+    p {
+      text-align: left;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: unset;
+    }
+  }
+
+  .offers__caption {
+    margin-bottom: unset;
+    grid-column: 1 / -1;
+  }
+
+  .offers__image-wrapper {
+    width: 400px;
+    height: 100%;
+  }
+
+  .offers__list {
+    grid-column: 1 / -1;
+    margin-top: 1px;
+  }
+
+  .offers__link {
+    margin: auto 0 0 -10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offers {
+    padding: 100px 103px;
+    grid-template-columns: 280px 280px 600px;
+    gap: 70px 0;
+  }
+
+  .offers__image-wrapper {
+    width: 280px;
+    height: 100%;
+  }
+
+  .offers__list {
+    grid-column: 3 / 4;
+    margin-left: 40px;
+    margin-top: 82px;
+  }
+
+  .offers__period-wrapper {
+    padding: 41px 45px 35px;
+
+    div {
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}

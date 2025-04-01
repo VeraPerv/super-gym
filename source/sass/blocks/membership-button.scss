@@ -1,0 +1,111 @@
+.membership-button {
+  padding: 0 0 8px;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $light;
+  position: relative;
+
+  &:hover {
+    color: rgba(16, 38, 84, 0.7);
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $tabs-hover;
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    color: $color-primary;
+    outline: none;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: $color-primary;
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
+  &:active {
+    color: $color-primary;
+
+    &::after {
+      background-color: $banners-background;
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    color: rgba(16, 38, 84, 0.3);
+    pointer-events: none;
+
+    &::after {
+      background-color: rgba(16, 38, 84, 0.3);
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:focus-visible::after {
+      background-color: rgba(16, 38, 84, 0.3);
+    }
+  }
+}
+
+.membership-button--current {
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: $tabs-state;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:disabled::after {
+    background-color: rgba(16, 38, 84, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .membership-button {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 5px 0 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .membership-button {
+    font-size: 20px;
+    line-height: 20px;
+
+    &--current {
+      &::after {
+        bottom: -2px;
+      }
+    }
+  }
+}
